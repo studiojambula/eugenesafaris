@@ -38,6 +38,7 @@ export default defineConfig({
         whattowear: path.resolve(__dirname, "kruger-guide/what-to-wear-on-safari/index.html"),
         // Kruger National Park
         krugernationalpark: path.resolve(__dirname, "kruger-national-park/index.html"),
+        knphistory: path.resolve(__dirname, "kruger-national-park/history/index.html"),
         malariaguide: path.resolve(__dirname, "kruger-national-park/malaria/index.html"),
         airports: path.resolve(__dirname, "kruger-national-park/airports/index.html"),
         besttimetovisit: path.resolve(__dirname, "kruger-national-park/best-time-to-visit/index.html"),
