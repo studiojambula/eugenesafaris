@@ -247,22 +247,26 @@
         <!-- Mobile menu toggle (right) -->
         <button
           id="menu-toggle"
-          tabindex="-1"
           type="button"
-          class="group/burger flex size-11 items-center justify-center text-white transition-colors duration-200 [-webkit-tap-highlight-color:transparent] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mist-700 group-data-[scrolled=true]:text-charcoal lg:hidden"
+          class="group/burger relative flex size-11 items-center justify-center rounded-full text-white transition-[color,background-color] duration-200 [-webkit-tap-highlight-color:transparent] hover:bg-black/5 active:bg-black/10 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-mist-700 group-data-[scrolled=true]:text-charcoal lg:hidden"
           aria-label="Open navigation menu"
           aria-expanded="false"
           aria-controls="mobile-menu"
         >
           <span class="relative block size-6" aria-hidden="true">
+            <!-- Top line -->
             <span
-              class="absolute left-1/2 top-1/2 -ml-3 -mt-px block h-0.5 w-6 -translate-y-1.75 rounded-full bg-current transition-all duration-300 ease-out motion-reduce:transition-none group-aria-expanded/burger:translate-y-0 group-aria-expanded/burger:rotate-45"
+              class="absolute left-1/2 top-1/2 block h-0.5 w-6 -translate-x-1/2 -translate-y-1.75 rounded-full bg-current transition-[transform,width] duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] motion-reduce:transition-none group-aria-expanded/burger:translate-y-0 group-aria-expanded/burger:rotate-45"
             ></span>
+
+            <!-- Middle line -->
             <span
-              class="absolute left-1/2 top-1/2 -ml-3 -mt-px block h-0.5 w-6 rounded-full bg-current transition-all duration-200 ease-out motion-reduce:transition-none group-aria-expanded/burger:scale-x-0 group-aria-expanded/burger:opacity-0"
+              class="absolute left-1/2 top-1/2 block h-0.5 w-4 -translate-x-1/2 translate-y-0 rounded-full bg-current transition-[opacity,transform] duration-200 ease-out motion-reduce:transition-none group-aria-expanded/burger:scale-x-0 group-aria-expanded/burger:opacity-0"
             ></span>
+
+            <!-- Bottom line -->
             <span
-              class="absolute left-1/2 top-1/2 -ml-3 -mt-px block h-0.5 w-6 translate-y-1.75 rounded-full bg-current transition-all duration-300 ease-out motion-reduce:transition-none group-aria-expanded/burger:translate-y-0 group-aria-expanded/burger:-rotate-45"
+              class="absolute left-1/2 top-1/2 block h-0.5 w-6 -translate-x-1/2 translate-y-1.75 rounded-full bg-current transition-[transform,width] duration-300 ease-[cubic-bezier(0.32,0.72,0,1)] motion-reduce:transition-none group-aria-expanded/burger:translate-y-0 group-aria-expanded/burger:-rotate-45"
             ></span>
           </span>
         </button>
@@ -385,7 +389,7 @@
           <div class="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
             <div class="max-w-4xl text-white">
               <h1 class="mb-6 text-3xl font-gelasio font-light lg:text-4xl">
-                A Slower, more personal <span class="underline-squiggle">Kruger</span> safari experience
+                A Slower, more personal <span class="underline-squiggle">Kruger Safari</span> experience
               </h1>
 
               <p class="mx-auto text-lg max-w-2xl leading-relaxed">

@@ -37,14 +37,78 @@
           {
             "@type": "ListItem",
             "position": 2,
-            "name": "Kruger Park",
+            "name": "Kruger National Park",
             "item": "https://eugenesafaris.com/kruger-national-park/"
           }
         ]
       }
     </script>
-    <script type="module" crossorigin src="/assets/main-ClEwcm43.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/main-BpXV-2Xj.css">
+    <style>
+      .experience-wrap {
+        --w: min(72vw, 24rem); /* card width */
+      }
+
+      .experience-stage {
+        position: relative;
+        height: calc(var(--w) * 1.25 + 3rem); /* 4:5 card + breathing room */
+        overflow: hidden;
+        touch-action: pan-y; /* vertical page scroll still works, horizontal swipes are ours */
+        user-select: none;
+        outline: none;
+      }
+
+      .experience-card {
+        position: absolute;
+        top: 1.5rem;
+        left: 50%;
+        width: var(--w);
+        margin-left: calc(var(--w) / -2); /* card is centered on the stage */
+        transition:
+          transform 0.5s ease,
+          opacity 0.5s ease;
+        will-change: transform;
+      }
+
+      /* Arrows: desktop only */
+      .experience-arrow {
+        display: none;
+        position: absolute;
+        top: 50%;
+        z-index: 30;
+        height: 2.5rem;
+        width: 2.5rem;
+        transform: translateY(-50%);
+        align-items: center;
+        justify-content: center;
+        border-radius: 9999px;
+        background: rgba(255, 255, 255, 0.92);
+        border: 1px;
+        color: #111827;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        transition:
+          background 0.2s,
+          color 0.2s;
+      }
+      .experience-arrow:hover {
+        background: #111827;
+        color: #fff;
+      }
+
+      @media (min-width: 1024px) {
+        .experience-arrow {
+          display: flex;
+        }
+        /* Sits on the outer edge of the small side cards */
+        .experience-arrow-prev {
+          left: max(8px, calc(50% - (var(--w) * 1.34 + 20px) + 12px));
+        }
+        .experience-arrow-next {
+          right: max(8px, calc(50% - (var(--w) * 1.34 + 20px) + 12px));
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/assets/main-4waiRtCS.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/main-D_ZybeSY.css">
   </head>
   <body class="antialiased">
     <!-- #region Navbar -->
@@ -298,18 +362,19 @@
     </aside>
     <!-- #endregion -->
     <main>
-      <!-- End of Nav - Start of Breadcrumb Navigation -->
+      <!-- Breadcrumb navigation -->
+      <div class="mx-auto w-full max-w-7xl px-5 lg:px-3 font-barlow">
+        <nav aria-label="Breadcrumb">
+          <ol class="flex flex-wrap items-center justify-center font-normal text-black lg:justify-start lg:text-md">
+            <li class="flex items-center">
+              <a href="/" class="transition-colors hover:text-mist-700"> HOME </a>
+              <span class="mx-2 text-black">/</span>
+            </li>
 
-      <nav aria-label="Breadcrumb" class="breadcrumb-link max-w-7xl mx-auto px-5 lg:px-3 mt-4">
-        <ol class="flex items-center text-[0.65rem] lg:text-xs text-gray-700">
-          <li class="flex items-center">
-            <a href="/" class="hover:underline">Home</a>
-            <span class="mx-2">/</span>
-          </li>
-
-          <li class="flex items-center text-gray-500" aria-current="page">Kruger Park</li>
-        </ol>
-      </nav>
+            <li class="text-black underline underline-offset-2" aria-current="page">KRUGER NATIONAL PARK</li>
+          </ol>
+        </nav>
+      </div>
       <!-- End of Breadcrumb Navigation start of Main Content -->
       <section class="mx-auto max-w-4xl px-6 py-8 text-center">
         <div class="text-center">
@@ -321,7 +386,9 @@
             <span class="h-px w-2 bg-gray-400"></span>
           </p>
 
-          <h1 class="mb-6 text-2xl font-cinzel tracking-normal text-gray-900 md:text-4xl">Kruger National Park</h1>
+          <h1 class="mb-6 text-2xl font-cinzel font-normal tracking-normal text-gray-900 md:text-4xl">
+            Kruger National Park
+          </h1>
 
           <p class="mx-auto max-w-3xl leading-relaxed">
             Explore Kruger National Park through its wildlife, landscapes, rest camps, weather, gates and places to
@@ -344,6 +411,204 @@
             35,000-square-kilometre conservation area connecting protected areas across South Africa, Mozambique and
             Zimbabwe.
           </p>
+        </div>
+      </section>
+      <section class="py-16">
+        <div class="container mx-auto max-w-4xl px-6 text-center">
+          <h2 class="pb-4">The Parks History</h2>
+          <p>
+            The
+            <a
+              href="/kruger-national-park/history/"
+              class="underline hover:underline underline-offset-[3px] decoration-1 decoration-amber-500 hover:decoration-2"
+              >history of Kruger National Park</a
+            >
+          </p>
+        </div>
+      </section>
+      <section class="overflow-hidden py-20">
+        <div class="mx-auto max-w-7xl px-6">
+          <!-- Section heading -->
+          <div class="mx-auto max-w-3xl text-center">
+            <p
+              class="font-cinzel mb-4 flex items-center justify-center gap-4 text-xs font-medium uppercase tracking-[0.2em] text-gray-700"
+            >
+              <span class="h-px w-6 bg-gray-400"></span>
+              MORE THAN A GAME DRIVE
+              <span class="h-px w-6 bg-gray-400"></span>
+            </p>
+
+            <h2 class="font-cinzel text-2xl tracking-normal text-gray-900 md:text-4xl">Experience Kruger your way</h2>
+
+            <p class="mx-auto mt-5 max-w-2xl leading-relaxed text-gray-700">
+              Kruger can be experienced in many different ways. You might spend the morning searching for lions, stop to
+              identify a bird you've never seen before, wait patiently for the right photograph or simply enjoy being
+              out in the bushveld. However you explore, there is always more to see.
+            </p>
+          </div>
+
+          <!-- Carousel -->
+          <div class="experience-wrap relative mt-14">
+            <div class="relative">
+              <button
+                id="experience-prev"
+                type="button"
+                aria-label="Previous experience"
+                class="experience-arrow experience-arrow-prev"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
+                  />
+                </svg>
+              </button>
+
+              <div id="kruger-experiences" class="experience-stage" tabindex="0">
+                <!-- Wildlife viewing -->
+                <article class="experience-card group overflow-hidden rounded-sm bg-gray-100">
+                  <div class="aspect-4/5 overflow-hidden">
+                    <img
+                      src="/images/kruger-wildlife-viewing.webp"
+                      alt="Elephants in Kruger National Park"
+                      class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 via-black/35 to-transparent p-6 pt-20 text-white"
+                  >
+                    <h3 class="font-cinzel text-xl">Wildlife viewing</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-white/85">
+                      Follow tracks, watch a herd move through the grass or spend time with an animal instead of rushing
+                      to the next sighting.
+                    </p>
+                  </div>
+                </article>
+
+                <!-- Birdwatching -->
+                <article class="experience-card group overflow-hidden rounded-sm bg-gray-100">
+                  <div class="aspect-4/5 overflow-hidden">
+                    <img
+                      src="/images/home/black-collared-barbet-pretoriuskop-rest-camp.webp"
+                      alt="Birdwatching in Kruger National Park"
+                      class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 via-black/35 to-transparent p-6 pt-20 text-white"
+                  >
+                    <h3 class="font-cinzel text-xl">Birdwatching</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-white/85">
+                      With hundreds of species and changing habitats, Kruger offers something new to look for around
+                      every corner.
+                    </p>
+                  </div>
+                </article>
+                <article class="experience-card group overflow-hidden rounded-sm bg-gray-100">
+                  <div class="aspect-4/5 overflow-hidden">
+                    <img
+                      src="/images/kruger-photography.webp"
+                      alt="Wildlife photography in Kruger National Park"
+                      class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 via-black/35 to-transparent p-6 pt-20 text-white"
+                  >
+                    <h3 class="font-cinzel text-xl">Photography</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-white/85">
+                      From dramatic wildlife encounters to small details in the bush, Kruger gives photographers time to
+                      work with the light and the moment.
+                    </p>
+                  </div>
+                </article>
+                <article class="experience-card group overflow-hidden rounded-sm bg-gray-100">
+                  <div class="aspect-4/5 overflow-hidden">
+                    <img
+                      src="/images/kruger-filmmaking.webp"
+                      alt="Wildlife filmmaking in Kruger National Park"
+                      class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 via-black/35 to-transparent p-6 pt-20 text-white"
+                  >
+                    <h3 class="font-cinzel text-xl">Wildlife filmmaking</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-white/85">
+                      Slow down, observe and capture the movement, sound and atmosphere that make the bushveld come
+                      alive.
+                    </p>
+                  </div>
+                </article>
+                <article class="experience-card group overflow-hidden rounded-sm bg-gray-100">
+                  <div class="aspect-4/5 overflow-hidden">
+                    <img
+                      src="/images/kruger-nature.webp"
+                      alt="Landscape in Kruger National Park"
+                      class="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <div
+                    class="absolute inset-x-0 bottom-0 bg-linear-to-t from-black/80 via-black/35 to-transparent p-6 pt-20 text-white"
+                  >
+                    <h3 class="font-cinzel text-xl">Nature and landscapes</h3>
+                    <p class="mt-2 text-sm leading-relaxed text-white/85">
+                      Look beyond the road for ancient trees, changing landscapes, insects, plants and the smaller
+                      details that make every part of Kruger different.
+                    </p>
+                  </div>
+                </article>
+              </div>
+
+              <button
+                id="experience-next"
+                type="button"
+                aria-label="Next experience"
+                class="experience-arrow experience-arrow-next"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-4"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div class="mt-4 flex justify-center">
+              <span
+                id="experience-counter"
+                class="min-w-12 text-center font-cinzel text-xs tracking-[0.15em] text-gray-500"
+                >1 / 5</span
+              >
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -512,5 +777,73 @@
       </div>
     </footer>
     <!-- Psalms 23:1–6 -->
+    <script>
+      (() => {
+        const stage = document.getElementById("kruger-experiences");
+        const cards = Array.from(stage.querySelectorAll(".experience-card"));
+        const counter = document.getElementById("experience-counter");
+        const n = cards.length;
+        const half = Math.floor(n / 2);
+        let active = 0;
+
+        function render() {
+          const small = window.innerWidth < 768;
+          cards.forEach((card, i) => {
+            // Shortest signed distance from the active card, wrapping around: -2..2 for 5 cards
+            const o = ((i - active + n + half) % n) - half;
+            const abs = Math.abs(o);
+            const side = small ? 0.92 : 0.84;
+
+            const scale = o === 0 ? 1 : side;
+            card.style.transform = `translateX(calc(${o} * (var(--w) * 0.92 + 20px))) scale(${scale})`;
+            card.style.opacity = abs === 0 ? 1 : abs === 1 ? (small ? 0.7 : 0.55) : 0;
+            card.style.zIndex = 10 - abs;
+            card.style.pointerEvents = abs > 1 ? "none" : "auto";
+            card.setAttribute("aria-hidden", o === 0 ? "false" : "true");
+            card.dataset.offset = o;
+            card.querySelector("img")?.setAttribute("draggable", "false");
+          });
+          counter.textContent = `${active + 1} / ${n}`;
+        }
+
+        function go(step) {
+          active = (active + step + n) % n;
+          render();
+        }
+
+        document.getElementById("experience-prev").addEventListener("click", () => go(-1));
+        document.getElementById("experience-next").addEventListener("click", () => go(1));
+
+        // Swipe / drag
+        let startX = null;
+        stage.addEventListener("pointerdown", (e) => {
+          startX = e.clientX;
+        });
+        stage.addEventListener("pointerup", (e) => {
+          if (startX === null) return;
+          const dx = e.clientX - startX;
+          startX = null;
+
+          if (dx < -50) go(1);
+          else if (dx > 50) go(-1);
+          else if (Math.abs(dx) < 6) {
+            // Tap a side card to bring it to the center
+            const card = e.target.closest(".experience-card");
+            const o = card ? Number(card.dataset.offset) : 0;
+            if (o === 1 || o === -1) go(o);
+          }
+        });
+        stage.addEventListener("pointercancel", () => (startX = null));
+
+        // Keyboard
+        stage.addEventListener("keydown", (e) => {
+          if (e.key === "ArrowRight") go(1);
+          if (e.key === "ArrowLeft") go(-1);
+        });
+
+        window.addEventListener("resize", render);
+        render();
+      })();
+    </script>
   </body>
 </html>

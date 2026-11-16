@@ -524,129 +524,74 @@
           </a>
         </div>
       </section>
-
       <section class="mx-auto max-w-5xl px-4 py-16 text-center text-black">
-        <h2 class="font-gelasio text-3xl sm:text-4xl">pricing</h2>
+        <h2 class="font-gelasio text-3xl sm:text-4xl">Pricing</h2>
+
         <p class="mx-auto mt-3 max-w-prose text-black/70">
           All-inclusive Kruger safaris, priced in rand per person per day on a shared basis. The more guests in your
           group, the lower the daily rate.
         </p>
 
-        <div class="mt-12 grid gap-6 md:grid-cols-3 md:items-stretch">
-          <!-- 2 guests -->
-          <article
-            class="flex flex-col rounded-3xl border border-black/15 bg-white p-8 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-          >
-            <h3 class="font-serif text-xl font-semibold">2 guests</h3>
-            <p class="mt-1 text-sm text-black/60">Our minimum per vehicle</p>
+        <!-- Pricing table -->
+        <div class="mt-10 overflow-hidden rounded-2xl border border-black/10 bg-white">
+          <div class="overflow-x-auto">
+            <table class="w-full text-left">
+              <thead class="border-b border-black/10 bg-stone-100">
+                <tr>
+                  <th class="px-6 py-4 text-sm font-semibold">Group size</th>
+                  <th class="px-6 py-4 text-sm font-semibold">Price per person / day</th>
+                  <th class="hidden px-6 py-4 text-sm font-semibold sm:table-cell">Example: 5 days</th>
+                </tr>
+              </thead>
 
-            <p class="mt-6 flex items-baseline gap-2">
-              <span class="text-5xl font-semibold">R6400</span>
-              <span class="text-sm text-black/60">per person / day</span>
-            </p>
+              <tbody class="divide-y divide-black/10">
+                <tr>
+                  <td class="px-6 py-5">
+                    <span class="font-medium">2 guests</span>
+                    <span class="mt-1 block text-sm text-black/55"> Our minimum per vehicle </span>
+                  </td>
+                  <td class="px-6 py-5 font-semibold">R6,400</td>
+                  <td class="hidden px-6 py-5 sm:table-cell">R25,600 pps</td>
+                </tr>
 
-            <dl class="mt-6 space-y-3 border-t border-black/10 pt-6 text-sm">
-              <div class="flex justify-between">
-                <dt class="text-black/60">Example 5 days</dt>
-                <dd class="font-semibold">R25,600 pp</dd>
-              </div>
-            </dl>
-          </article>
+                <tr>
+                  <td class="px-6 py-5">
+                    <span class="font-medium">3-4 guests</span>
+                    <span class="mt-1 block text-sm text-black/55"> Great for families and friends </span>
+                  </td>
+                  <td class="px-6 py-5 font-semibold">R5,500</td>
+                  <td class="hidden px-6 py-5 sm:table-cell">R22,000 pps</td>
+                </tr>
 
-          <!-- 3 to 4 guests -->
-          <article
-            class="flex flex-col rounded-3xl border border-black/15 bg-white p-8 text-left shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
-          >
-            <h3 class="text-xl font-semibold">3 to 4 guests</h3>
-            <p class="mt-1 text-sm text-black/60">Great for families and friends</p>
-
-            <p class="mt-6 flex items-baseline gap-2">
-              <span class="text-5xl font-semibold">R5500</span>
-              <span class="text-sm text-black/60">per person / day</span>
-            </p>
-
-            <dl class="mt-6 space-y-3 border-t border-black/10 pt-6 text-sm">
-              <div class="flex justify-between">
-                <dt class="text-black/60">5 days</dt>
-                <dd class="font-semibold">R22,000 pp</dd>
-              </div>
-            </dl>
-          </article>
-
-          <!-- 5 to 6 guests (featured) -->
-          <article
-            class="relative flex flex-col rounded-3xl border-2 border-amber-500 bg-amber-50 p-8 text-left shadow-lg transition hover:-translate-y-1 hover:shadow-xl"
-          >
-            <span
-              class="absolute -top-3.5 right-6 rounded-full bg-amber-400 px-3 py-1 text-xs font-semibold text-black shadow-sm"
-            >
-              Best rate
-            </span>
-            <h3 class="font-serif text-xl font-semibold">5 to 6 guests</h3>
-            <p class="mt-1 text-sm text-black/60">The lowest price per person</p>
-
-            <p class="mt-6 flex items-baseline gap-2">
-              <span class="text-5xl font-semibold">R4900</span>
-              <span class="text-sm text-black/60">per person / day</span>
-            </p>
-
-            <dl class="mt-6 space-y-3 border-t border-black/10 pt-6 text-sm">
-              <div class="flex justify-between">
-                <dt class="text-black/60">5 days</dt>
-                <dd class="font-semibold">R19,600 pp</dd>
-              </div>
-            </dl>
-          </article>
+                <tr class="bg-amber-50/50">
+                  <td class="px-6 py-5">
+                    <div class="flex items-center gap-3">
+                      <span class="font-medium">5-6 guests</span>
+                      <span class="rounded-full bg-amber-400 px-2.5 py-0.5 text-xs font-medium"> Best rate </span>
+                    </div>
+                    <span class="mt-1 block text-sm text-black/55"> The lowest price per person </span>
+                  </td>
+                  <td class="px-6 py-5 font-semibold">R4,900</td>
+                  <td class="hidden px-6 py-5 sm:table-cell">R19,600 pps</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
+        <p class="mt-4 text-sm text-black/60">pps = per person sharing. Rates are for shared groups.</p>
 
         <!-- What's included -->
-        <div class="mx-auto mt-12 max-w-3xl rounded-2xl bg-stone-100 px-6 py-6">
-          <p class="font-serif text-lg font-semibold">Every price includes</p>
-          <ul class="mt-4 grid gap-x-6 gap-y-3 text-left text-sm sm:grid-cols-2">
-            <li class="flex items-start gap-2">
-              <svg class="mt-0.5 size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path
-                  fill-rule="evenodd"
-                  d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              Park and conservation fees
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="mt-0.5 size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path
-                  fill-rule="evenodd"
-                  d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              Accommodation
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="mt-0.5 size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path
-                  fill-rule="evenodd"
-                  d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              All meals
-            </li>
-            <li class="flex items-start gap-2">
-              <svg class="mt-0.5 size-5 shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                <path
-                  fill-rule="evenodd"
-                  d="M16.7 5.3a1 1 0 0 1 0 1.4l-7.5 7.5a1 1 0 0 1-1.4 0L3.3 9.7a1 1 0 1 1 1.4-1.4l3.8 3.8 6.8-6.8a1 1 0 0 1 1.4 0Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              Guided game drives
-            </li>
+        <div class="mx-auto mt-12 max-w-3xl border-t border-black/10 pt-10">
+          <p class="font-gelasio text-xl">Every price includes</p>
+
+          <ul class="mt-5 grid gap-x-8 gap-y-3 text-left text-sm sm:grid-cols-2">
+            <li>✓ Park and conservation fees</li>
+            <li>✓ Accommodation</li>
+            <li>✓ All meals</li>
+            <li>✓ Guided game drives</li>
           </ul>
         </div>
-
-        <p class="mt-4 text-sm text-black/60">pp = per person. Rates are for shared groups.</p>
       </section>
     </main>
     <!-- Footer-->
