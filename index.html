@@ -406,7 +406,7 @@
         <div class="text-center text-neutral-800">
           <h2 class="font-cinzel font-medium text-2xl md:text-3xl mb-8 tracking-tight">
             The
-            <span class="font-semibold text-4xl">KRUGER</span>
+            <span class="font-semibold text-4xl">Kruger Safari</span>
             Experience
           </h2>
 
@@ -1112,12 +1112,13 @@
         </div>
       </div>
 
-      <div class="bg-white border-t border-gray-300 py-4">
-        <div
-          class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col-reverse md:flex-row items-center justify-between text-xs text-gray-600"
-        >
-          <div class="flex flex-col sm:flex-row items-center gap-1 sm:gap-4 text-center md:text-left">
-            <div>&copy; 2026 Eugene Safaris. All rights reserved.</div>
+      <div class="bg-white border-t border-gray-200 py-4">
+        <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <!-- Copyright & Credit -->
+          <div class="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-gray-500 text-xs">
+            <p class="text-xs leading-none pb-3 md:pb-0 m-2 md:m-0">
+              © <span id="current-year">2026</span> Eugene Safaris. A Slower Kruger Safari.
+            </p>
 
             <span class="hidden sm:block text-gray-300">|</span>
 
@@ -1125,21 +1126,22 @@
               href="https://jambula.co.za"
               target="_blank"
               rel="noopener noreferrer"
-              class="text-gray-400 hover:text-gray-600 transition"
+              class="text-xs leading-none text-gray-400 hover:text-gray-600 transition-colors"
             >
               Powered by Jambula
             </a>
           </div>
 
-          <div class="flex space-x-4 justify-center md:justify-end mt-4 md:mt-0 mb-4 md:mb-0">
+          <!-- Social Links -->
+          <div class="flex items-center justify-center gap-5">
             <a
               href="https://www.facebook.com/eugenesafaris"
               target="_blank"
               rel="nofollow noopener noreferrer"
               aria-label="Facebook"
-              class="hover:opacity-70 transition"
+              class="opacity-60 hover:opacity-100 transition-opacity"
             >
-              <img src="/src/assets/images/logo/facebook.svg" alt="Facebook" class="w-5 h-5" />
+              <img src="/src/assets/images/logo/facebook.svg" alt="Facebook" class="w-4 h-4" />
             </a>
 
             <a
@@ -1147,9 +1149,9 @@
               target="_blank"
               rel="nofollow noopener noreferrer"
               aria-label="Instagram"
-              class="hover:opacity-70 transition"
+              class="opacity-60 hover:opacity-100 transition-opacity"
             >
-              <img src="/src/assets/images/logo/instagram.svg" alt="Instagram" class="w-5 h-5" />
+              <img src="/src/assets/images/logo/instagram.svg" alt="Instagram" class="w-4 h-4" />
             </a>
 
             <a
@@ -1157,9 +1159,9 @@
               target="_blank"
               rel="nofollow noopener noreferrer"
               aria-label="YouTube"
-              class="hover:opacity-70 transition"
+              class="opacity-60 hover:opacity-100 transition-opacity"
             >
-              <img src="/src/assets/images/logo/youtube.svg" alt="YouTube" class="w-5 h-5" />
+              <img src="/src/assets/images/logo/youtube.svg" alt="YouTube" class="w-4 h-4" />
             </a>
           </div>
         </div>
@@ -1209,6 +1211,10 @@
         prevButton.addEventListener("click", () => scrollReviews(-1));
         nextButton.addEventListener("click", () => scrollReviews(1));
       }
+    </script>
+
+    <script>
+      document.getElementById("current-year").textContent = new Date().getFullYear();
     </script>
 
     <script type="module" src="/src/main.js"></script>
