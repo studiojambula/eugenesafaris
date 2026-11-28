@@ -1,3 +1,4 @@
+/* ── Carousel scrollbar ─────────────────────────────────────── */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
@@ -6,6 +7,7 @@
   scrollbar-width: none;
 }
 
+/* ── Keyframes (each defined once) ──────────────────────────── */
 @keyframes drift {
   0%,
   100% {
@@ -46,66 +48,6 @@
     opacity: 0.55;
   }
 }
-.icon-sunny .sun-body {
-  animation: bob 3.5s ease-in-out infinite;
-  transform-origin: center;
-}
-.icon-cloud .cloud-back {
-  animation: drift 4s ease-in-out infinite;
-}
-.icon-rain .drop {
-  animation: fall 1.1s linear infinite;
-}
-.icon-rain .drop:nth-child(2) {
-  animation-delay: 0.35s;
-}
-.icon-rain .drop:nth-child(3) {
-  animation-delay: 0.7s;
-}
-.icon-storm .bolt {
-  animation: flicker 1.6s ease-in-out infinite;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .icon-sunny .sun-body,
-  .icon-cloud .cloud-back,
-  .icon-rain .drop,
-  .icon-storm .bolt {
-    animation: none !important;
-  }
-}
-
-@keyframes bob {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-@keyframes drift {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(3px);
-  }
-}
-@keyframes fall {
-  0% {
-    transform: translateY(-2px);
-    opacity: 0;
-  }
-  30% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(6px);
-    opacity: 0;
-  }
-}
 @keyframes pulse-dot {
   0%,
   100% {
@@ -125,22 +67,42 @@
   }
 }
 
+/* ── Icon animations ────────────────────────────────────────── */
+/* transform-box makes transforms on SVG parts behave like normal elements */
+.icon-sunny .sun-body,
+.icon-moon .moon-body,
+.icon-cloud .cloud-back,
+.icon-rain .drop,
+.icon-storm .bolt {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
 .icon-sunny .sun-body {
   animation: bob 3.5s ease-in-out infinite;
-  transform-origin: center;
+}
+.icon-moon .moon-body {
+  animation: bob 4.5s ease-in-out infinite;
 }
 .icon-cloud .cloud-back {
   animation: drift 4s ease-in-out infinite;
 }
+.icon-storm .bolt {
+  animation: flicker 1.6s ease-in-out infinite;
+}
+
 .icon-rain .drop {
   animation: fall 1.1s linear infinite;
 }
-.icon-rain .drop:nth-child(2) {
+/* nth-of-type counts <line> elements only (nth-child counted the cloud paths too) */
+.icon-rain .drop:nth-of-type(2) {
   animation-delay: 0.35s;
 }
-.icon-rain .drop:nth-child(3) {
+.icon-rain .drop:nth-of-type(3) {
   animation-delay: 0.7s;
 }
+
+/* ── Hero card ──────────────────────────────────────────────── */
 .live-dot {
   animation: pulse-dot 1.8s ease-in-out infinite;
 }
@@ -148,10 +110,13 @@
   animation: float-glow 6s ease-in-out infinite;
 }
 
+/* ── Reduced motion ─────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   .icon-sunny .sun-body,
+  .icon-moon .moon-body,
   .icon-cloud .cloud-back,
   .icon-rain .drop,
+  .icon-storm .bolt,
   .live-dot,
   .glow {
     animation: none !important;
